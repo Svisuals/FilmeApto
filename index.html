@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Apto</title>
+  <link rel="icon" type="image/png" href="sv.png">
   <style>
     body {
       margin: 0;
@@ -23,13 +24,22 @@
       height: auto;
     }
   </style>
+  <script>
+    function startVideo() {
+      var video = document.getElementById('myVideo');
+      video.play();
+    }
+  </script>
 </head>
 <body>
   <div class="video-container">
-    <video controls>
-      <source src="FilmeApto="video/mp4">
+    <video id="myVideo" controls autoplay>
+      <source src="FilmeApto.mp4" type="video/mp4">
       Tu navegador no admite la reproducción de videos HTML5.
     </video>
   </div>
+  <script>
+    startVideo();
+  </script>
 </body>
 </html>
